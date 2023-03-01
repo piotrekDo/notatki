@@ -36,8 +36,8 @@ Chcąc połączyć dane z innej bazy wystarczy dodać prefix z nazwą tej bazy `
 
 
 <h2 style="color:green">SELF JOIN</h2>
-W ramach bazy `sql_hr.employees` mamy zdefiniowaną poniższą tabelę
-![self_join_table](../img/self_join_table.jpg)
+W ramach bazy `sql_hr.employees` mamy zdefiniowaną poniższą tabelę  
+![self_join_table](https://github.com/piotrekDo/notatki/blob/main/SQL/img/self_join_table.jpg)
 
 kolumna `reports_to` wskazuje na klucz główny samej siebie, wskazując jednocześnie na przełożonego dla każdego pracownika.  Możemy wykorzystać *self join* aby uzyskać dane managera dla każdego pracownika. 
 ```
@@ -63,10 +63,10 @@ JOIN order_statuses os ON o.status = os.order_status_id;
 <h2 style="color:green">ZŁACZENIA Z KILKU KOLUMN</h2>
 Czasami nie mamy możliwości złączenia tablel po kluczu obcym. Złączenia wymagają unikalnych wartośći.
 `sql_store.order_items`
-![compound order items](../img/compound_order_items.jpg)
+![compound order items](https://github.com/piotrekDo/notatki/blob/main/SQL/img/compound_order_items.jpg)
 W tabeli `order_items` mamy wiele wpisów z `order_id` oraz `product_id`. Możemy stworzyć warunek z kombinacji tych 2 pól. W tabeli `order_items` mamy **klucz kompozytowy** stworzony z 2 kolumn właśnie. 
 Dokonujemy złączenia z wykorzystaniem słówka `AND`
-```
+``
 SELECT * 
 FROM order_items oi
 JOIN order_item_notes oin
@@ -125,7 +125,7 @@ FROM orders
 WHERE order_date < '2019-01-01';
 ```
 
-co pozwli osiągnąc wynik:
-![union](../img/union.jpg)
+co pozwli osiągnąc wynik:  
+![union](https://github.com/piotrekDo/notatki/blob/main/SQL/img/union.jpg)
 
 **WAŻNE**- nazwa kolumn jest określana przez pierwszy SELECT. 
