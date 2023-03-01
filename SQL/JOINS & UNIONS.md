@@ -8,7 +8,7 @@ FROM orders
 JOIN customers ON orders.customer_id = customers.customer_id;
 ```
 
-_Column ambiguous_ - powszechny problem, jeżeli zaznaczamy kolumnę występującą w kilku tabelach:
+Column ambiguous - powszechny problem, jeżeli zaznaczamy kolumnę występującą w kilku tabelach:
 ```
 SELECT order_id, customer_id, first_name
 FROM orders
